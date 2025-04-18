@@ -20,13 +20,13 @@ sh easy_localization.sh
 ```
 
 # Example
-<table >
+<table>
     <tr align="center">
         <td>The first launch</td>
         <td>Subsequent launches</td>
     </tr>
     <tr>
-        <td width="50%"><img src="https://github.com/KonstantenKomkov/server_side_localization/blob/master/assets/first_start.gif"></td>
-        <td width="50%"><img src="https://github.com/KonstantenKomkov/server_side_localization/blob/master/assets/second_start.gif"></td>
+        <td width="50%"><img src="https://github.com/KonstantenKomkov/server_side_localization/blob/main/assets/first_start.gif"></td>
+        <td width="50%"><img src="https://github.com/KonstantenKomkov/server_side_localization/blob/main/assets/second_start.gif"></td>
     </tr>
 </table>
