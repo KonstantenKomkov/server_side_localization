@@ -18,13 +18,10 @@ class AssetCacheRemoteLoader extends RootBundleAssetLoader {
   late final StreamSubscription subscription;
 
   bool isFirstLoading = true;
-  String? currentPath;
-  Locale? currentLocale;
   SupportedTranslations? translations;
 
   @override
   Future<Map<String, dynamic>?> load(String path, Locale locale) async {
-    currentPath = path;
     if (translations != null) {
       final value = translations!.toJson()[locale.languageCode];
       if (value is Translations) {
@@ -47,12 +44,12 @@ class AssetCacheRemoteLoader extends RootBundleAssetLoader {
 
     if (isAnotherVersion && isFirstLoading) {
       isFirstLoading = false;
-      currentLocale = CodegenLoader.mapLocales.containsKey(locale.languageCode)
-          ? locale
-          : Locale('en');
-      return CodegenLoader.mapLocales[currentLocale!.languageCode];
+      final currentLocale =
+          CodegenLoader.mapLocales.containsKey(locale.languageCode)
+              ? locale
+              : Locale('en');
+      return CodegenLoader.mapLocales[currentLocale.languageCode];
     }
-    currentLocale = locale;
     return localData == null
         ? CodegenLoader.mapLocales[locale.languageCode]
         : localData.toJson();
