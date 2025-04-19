@@ -15,8 +15,6 @@ class AssetCacheRemoteLoader extends RootBundleAssetLoader {
 
   AssetCacheRemoteLoader._internal();
 
-  late final StreamSubscription subscription;
-
   bool isFirstLoading = true;
   SupportedTranslations? translations;
 
