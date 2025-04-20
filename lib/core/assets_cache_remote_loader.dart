@@ -32,11 +32,9 @@ class AssetCacheRemoteLoader extends RootBundleAssetLoader {
 
     final (
       localData,
-      assetData,
       isAnotherVersion,
     ) = await (
       LocalizationCacheRepositoryImpl().getSupportedLocale(locale.languageCode),
-      Future.value(CodegenLoader.mapLocales[locale.languageCode]),
       PackageInfoService().isAnotherVersion(),
     ).wait;
 

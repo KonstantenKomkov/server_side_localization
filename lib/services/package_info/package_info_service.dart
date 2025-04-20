@@ -15,8 +15,6 @@ class PackageInfoService {
 
   bool? _isAnotherVersion;
 
-  bool isAndroidWithGoogleServices = false;
-
   Future<bool> isAnotherVersion() async {
     if (_isAnotherVersion != null) return _isAnotherVersion!;
     if (packageInfo?.buildNumber == null) {
